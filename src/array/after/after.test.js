@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
-import after from './after.mjs';
+import after from './after.js';
 
 describe('array:after', () => {
   it('returns the elements after the specified index', () => {
@@ -20,5 +20,5 @@ describe('array:after', () => {
     const compare = ({b: first}, {b: second}) => first - second;
     const result = after(array, compare, { b: 5 });
     assert.deepEqual(result,  [{ a: 7, b: 20 }, { a: 10, b: 3 }]);
-  })
+  });
 });
